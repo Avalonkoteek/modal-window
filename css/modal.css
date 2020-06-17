@@ -1,0 +1,73 @@
+.d-modal {
+}
+.d-modal.open .d-modal__overlay,
+.d-modal.open .d-modal__window {
+  opacity: 1;
+  z-index: 200;
+}
+.d-modal.open .d-modal__window {
+  transform: translateY(100px);
+}
+.d-modal.open .d-modal__overlay {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.d-modal.hide .d-modal__overlay,
+.d-modal.hide .d-modal__window {
+  opacity: 1;
+  z-index: 200;
+}
+.d-modal.hide .d-modal__window {
+  transform: translateY(-100%);
+}
+.d-modal.hide .d-modal__overlay {
+  background-color: rgba(0, 0, 0, 0);
+}
+.d-modal__overlay,
+.d-modal__window {
+  opacity: 0;
+  z-index: -1;
+}
+
+.d-modal__overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 0.4s ease;
+}
+.d-modal__window {
+  width: 50vw;
+  min-width: 300px;
+  background: #fff;
+  border-radius: 5px;
+  margin: 0 auto;
+  transform: translateY(-100%);
+  transition: transform 0.4s ease;
+}
+.d-modal__header {
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+}
+.d-modal__title {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+.d-modal__close {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.d-modal__body {
+  padding: 0;
+}
+.d-modal__footer {
+  padding: 5px 10px;
+  border-top: 1px solid #ddd;
+}
+.d-modal__body > p {
+  margin: 10px 10px 10px;
+}
